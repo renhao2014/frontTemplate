@@ -13,65 +13,160 @@
     <link href="../lib/boostrap3/css/bootstrap.css" rel="stylesheet">
     <link href="../css/offcanvas.css" rel="stylesheet">
 
-  
+  <style type="text/css">
+  	p{text-indent:2em;}
+  	.rowDesc li{
+  		font-size: 18px;
+  		margin-bottom: 7px;
+  	}
+  	.rowDesc ul li{
+  		font-size: 16px;
+  		margin-bottom: 7px;
+  	}
+  </style>
   </head>
 
   <body>
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" onclick="clickMe();" data-toggle="collapse"  aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+          <button type="button" class="navbar-toggle" onclick="clickMe();" >
+            <!--<span class="sr-only"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>-->
+            <span style="color:white;height:50px;padding: 15px 0px;font-size:18px;line-height:20px;">详情</span>
           </button>
-          <a class="navbar-brand" href="#">主页</a>
+          <a class="navbar-brand" href="#" style="margin-top:4px;font-size: 18px;">主页</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#about">关于</a></li>
-            <li><a href="#contact">联系我</a></li>
-          </ul>
-        </div>
+       
       </div>
     </nav>
 
     <div class="container">
 			<!--左边部分-->
       <div class="row row-offcanvas row-offcanvas-right">
+      	<!--首页-->
         <div class="col-xs-12 col-sm-9 tabPage" style="display: block;" id="mainTab">
           <div class="jumbotron">
             <h1>视频音译</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+            <p>
+            	 一款可以帮您自动根据视频声音生成字幕的视频播放软件，目前支持中文、英语、日语和韩语。
+            </p>
+            <p>
+            	我们自身也有视频翻译的需求，但是发现市面上有此类功能的不多。比如大多数视频翻译都要求有原语言的文字字幕，
+            	才能翻译出目标语言的字幕；又如Google需要将视频上传到YouTube，或者采用付费调用其接口的方式，而在国内往往又存
+            	在墙和海外支付的问题，对于大众来说使用极不方便和稳定。因此有了这款产品的诞生。
+            </p>
           </div>
-          <div class="row">
-              <h2>首页</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <div style="height: 800px;"></div>
+          <div class="row rowDesc" style="padding: 0px 15px 0px 15px;">
+              <h2 style="margin-bottom: 20px;">整体介绍</h2>
+              <h4>1.功能</h4>
+              <ul>
+              	<li>原本有字幕时，支持生成新的翻译后的字幕</li>
+              	<span>在线模式精准度可达89%，离线模式精准度可达67%。</span>
+              	<div style="margin-bottom: 18px;"></div>
+              	
+              	<li>原本无字幕，视频语音为中文时，支持自动生成中文字幕</li>
+              	<div style="margin-bottom: 18px;"></div>
+              	
+              	<li>原本没有字幕时，支持根据视频声音生成新的翻译后的字幕</li>
+              	<span>仅支持在线模式。同时基于技术难度，采取了模式识别和深层神经网络结合的办法，虽然精确度及其瓶颈有一定
+              		下降，但是已足以满足大多数用户的使用，并由此减轻了用户的费用成本。具体参见详情。
+              	</span>
+              	<div style="margin-bottom: 18px;"></div>
+              </ul>
+              
+              <h4>2.特色</h4>
+              <ul>
+              	<li>功能强大。可以直接根据声音生成字幕并生成新的视频文件。</li>
+              	<li>使用简单。无需翻墙、海外支付、上传下载等各类烦心操作。</li>
+              	<div style="margin-bottom: 18px;"></div>
+              </ul>
+              
+              <h4>3.关于本项目</h4>
+              <p style="font-size: 16px;">
+              	一次AI与需求碰撞产生的产品，当前处于尾期小范围测试阶段，希望大家多多提Bug和建议啦，
+              	会解锁彩蛋哦 ^_^
+              </p>
+              <div style="margin-bottom: 18px;"></div>
+              
+              <h4>3.关于我们</h4>
+              <p style="font-size: 16px;">
+              	冰山研发小组，让我们一起用技术和理想改造这世界吧~
+              </p>
+              <div style="margin-bottom: 18px;"></div>
+              <p></p>
+              
+              <h4>4.其他</h4>
+              <p style="font-size: 16px;">
+              	点击详情或者左滑了解更多。（手机端）
+              </p>
+              <div style="margin-bottom: 18px;"></div>
+              
+              <div style="height: 50px;"></div>
           </div>
         </div>
+				<!--首页end-->
 
+
+				<!--功能详细-->
         <div class="col-xs-12 col-sm-9 tabPage" style="display: none;" id="wholeDescTab">
-          <div class="jumbotron">
-            <h1>整体介绍</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-          </div>
-          <div class="row">
-              <h2>整体介绍</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <div class="row rowDesc" style="padding: 0px 15px 0px 15px;">
+              <h2 style="margin-bottom: 20px;">功能详细</h2>
+              <h4>1.功能</h4>
+              <ul>
+              	<li>原本有字幕时，支持生成新的翻译后的字幕</li>
+              	<span>在线模式精准度可达89%，离线模式精准度可达67%。</span>
+              	<div style="margin-bottom: 18px;"></div>
+              	
+              	<li>原本无字幕，视频语音为中文时，支持自动生成中文字幕</li>
+              	<div style="margin-bottom: 18px;"></div>
+              	
+              	<li>原本没有字幕时，支持根据视频声音生成新的翻译后的字幕</li>
+              	<span>仅支持在线模式。同时基于技术难度，采取了模式识别和深层神经网络结合的办法，虽然精确度及其瓶颈有一定
+              		下降，但是已足以满足大多数用户的使用，并由此减轻了用户的费用成本。具体参见详情。
+              	</span>
+              	<div style="margin-bottom: 18px;"></div>
+              </ul>
+              
+              <h4>2.特色</h4>
+              <ul>
+              	<li>功能强大。可以直接根据声音生成字幕并生成新的视频文件。</li>
+              	<li>使用简单。无需翻墙、海外支付、上传下载等各类烦心操作。</li>
+              </ul>
+              
+              <h4>3.关于本项目</h4>
+              <p style="font-size: 16px;">
+              	一次AI与需求碰撞产生的产品，当前处于尾期小范围测试阶段，希望大家多多提Bug和建议啦，
+              	会解锁彩蛋哦 ^_^
+              </p>
+              
+              <h4>3.关于我们</h4>
+              <p style="font-size: 16px;">
+              	冰山研发小组，让我们一起用技术和理想改造这世界吧~
+              </p>
+              <p></p>
+              
+              <h4>4.其他</h4>
+              <p style="font-size: 16px;">
+              	点击详情或者左滑了解更多。（手机端）
+              </p>
+              <p></p>
+              
+              <div style="height: 50px;"></div>
           </div>
         </div>
+        <!--功能详细end-->
         
         
         
-
+        
 				<!--右边部分-->
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" >
           <div class="list-group">
             <a href="#" class="list-group-item active tabMenu" name="mainTab">首页</a>
-            <a href="#" class="list-group-item tabMenu" name="wholeDescTab">整体介绍</a>
-            <a href="#" class="list-group-item tabMenu">详细说明</a>
+            <a href="#" class="list-group-item tabMenu" name="wholeDescTab">详细说明</a>
             <a href="#" class="list-group-item tabMenu">付费</a>
             <a href="#" class="list-group-item tabMenu">评论</a>
             <a href="#" class="list-group-item tabMenu">注意</a>
@@ -83,7 +178,7 @@
       <hr>
 
       <footer>
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; 2018 Company, Inc.</p>
       </footer>
     </div>
     
@@ -108,6 +203,12 @@
     		$(this).addClass("active");
     	})
     	
+    	
+    	var windowHeight = $(window).height(),
+   		$body = $("body");
+   		$body.css("height", windowHeight);
+   		
+   		
     	$("body").on("touchstart", function(e) {
 		    startX = e.originalEvent.changedTouches[0].pageX,
 		    startY = e.originalEvent.changedTouches[0].pageY;
@@ -124,7 +225,6 @@
 			    
 			    //右滑
 			    if (xabs>yabs && X > 30 ) {
-			        console.log('右滑'+X);
 					    if (e.cancelable) {
 					        if (!e.defaultPrevented) {
 					            e.preventDefault();
@@ -134,31 +234,29 @@
 			    }
 			    //左滑
 			    else if (xabs>yabs &&  X < -30 ) {
-			        console.log('左滑'+X);
 			        if (e.cancelable) {
 					        if (!e.defaultPrevented) {
 					            e.preventDefault();
 					        }
 					    }
+			        goTop();
 			        $('.row-offcanvas').toggleClass('active');
 			    }
 			    //下滑
 			    else if (yabs>xabs &&  Y > 30) {
-			        console.log('下滑'+Y); 
-			        if (e.cancelable) {
-					        if (!e.defaultPrevented) {
-					            e.preventDefault();
-					        }
-					    }
+//			        if (e.cancelable) {
+//					        if (!e.defaultPrevented) {
+//					            e.preventDefault();
+//					        }
+//					    }
 			    }
 			    //上滑
 			    else if (yabs>xabs &&  Y < -30 ) {
-			        console.log('上滑'+Y);
-			        if (e.cancelable) {
-					        if (!e.defaultPrevented) {
-					            e.preventDefault();
-					        }
-					    }
+//			        if (e.cancelable) {
+//					        if (!e.defaultPrevented) {
+//					            e.preventDefault();
+//					        }
+//					    }
 			    }
 			    //单击
 			    else{
@@ -174,10 +272,12 @@
     	
     	
     function goTop(){
+    		
         //设置定时器
         timer=setInterval(function(){
             //获取滚动条距离顶部的高度
             var osTop=document.documentElement.scrollTop|| document.body.scrollTop;
+            //alert("osTop="+osTop);
             var ispeed=Math.floor(-osTop / 5);
             isTop = true;
             document.documentElement.scrollTop=document.body.scrollTop = osTop+ispeed;
