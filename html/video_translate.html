@@ -14,7 +14,7 @@
     <link href="../css/offcanvas.css" rel="stylesheet">
 
   <style type="text/css">
-  	p{text-indent:2em;}
+  	.indent{text-indent:2em;}
   	.rowDesc li{
   		font-size: 18px;
   		margin-bottom: 7px;
@@ -49,15 +49,15 @@
       	<!--首页-->
         <div class="col-xs-12 col-sm-9 tabPage" style="display: block;" id="mainTab">
           <div class="jumbotron">
-            <h1>视频音译</h1>
-            <p>
+            <h1>冰山视频音译</h1>
+            <p class="indent">
             	 一款可以帮您自动根据视频声音生成字幕的视频播放软件，目前支持中文、英语、日语和韩语。
             </p>
-            <p>
+           <!-- <p class="indent">
             	我们自身也有视频翻译的需求，但是发现市面上有此类功能的不多。比如大多数视频翻译都要求有原语言的文字字幕，
             	才能翻译出目标语言的字幕；又如Google需要将视频上传到YouTube，或者采用付费调用其接口的方式，而在国内往往又存
             	在墙和海外支付的问题，对于大众来说使用极不方便和稳定。因此有了这款产品的诞生。
-            </p>
+            </p>-->
           </div>
           <div class="row rowDesc" style="padding: 0px 15px 0px 15px;">
               <h2 style="margin-bottom: 20px;">整体介绍</h2>
@@ -84,23 +84,27 @@
               	<div style="margin-bottom: 18px;"></div>
               </ul>
               
-              <h4>3.关于本项目</h4>
+              <h4>3.功能预览</h4>
+              <img src="http://od7t2h5r2.bkt.clouddn.com/img/liework/resource/translate_setting.jpg" />
+              <div style="margin-bottom: 18px;"></div>
+              
+              <h4>4.关于本项目</h4>
               <p style="font-size: 16px;">
               	一次AI与需求碰撞产生的产品，当前处于尾期小范围测试阶段，希望大家多多提Bug和建议啦，
               	会解锁彩蛋哦 ^_^
               </p>
               <div style="margin-bottom: 18px;"></div>
               
-              <h4>3.关于我们</h4>
+              <h4>5.关于我们</h4>
               <p style="font-size: 16px;">
               	冰山研发小组，让我们一起用技术和理想改造这世界吧~
               </p>
               <div style="margin-bottom: 18px;"></div>
               <p></p>
               
-              <h4>4.其他</h4>
+              <h4>6.其他</h4>
               <p style="font-size: 16px;">
-              	点击详情或者左滑了解更多。（手机端）
+              	点击详情或者左滑（手机端）了解更多。
               </p>
               <div style="margin-bottom: 18px;"></div>
               
@@ -114,63 +118,163 @@
         <div class="col-xs-12 col-sm-9 tabPage" style="display: none;" id="wholeDescTab">
           <div class="row rowDesc" style="padding: 0px 15px 0px 15px;">
               <h2 style="margin-bottom: 20px;">功能详细</h2>
-              <h4>1.功能</h4>
+              <h4>1.基础说明</h4>
               <ul>
-              	<li>原本有字幕时，支持生成新的翻译后的字幕</li>
-              	<span>在线模式精准度可达89%，离线模式精准度可达67%。</span>
-              	<div style="margin-bottom: 18px;"></div>
+              	<li>整体介绍</li>
+              	<p style="font-size: 14px;">
+              	这是一款可以帮您自动根据视频声音生成字幕的视频播放软件，目前支持中文、英语、日语和韩语。
+              	</p>
+              	<p style="font-size: 14px;">
+              	我们自身也有视频翻译的需求，但是市面上的产品基本和我们的需求不太一致：
+              	Google，需要将整个视频上传到YouTube，但是只能观看，没法把翻译后的视频下载下来；同时需要翻墙，
+              	无论是从便利还是网速方面都不太理想；虽然Google也单独对外提供了音译的接口，但是还是需要解决
+              	墙、海外支付、自己写程序等问题，仍然不适合大众。
+              	网易，网易翻译主要针对的是高端翻译，而且是人工翻译，对于我们来说成本太高。
+              	其他翻译，基本都要求有原语言下的字幕，然后只是对文字做了翻译。
+              	于是，我们就想着做一款对准确度要求不那么高，这样用户成本也能降低，但是又能让大部分用户满足的
+              	视频音译效果的软件。
+              	</p>
+              	<p style="font-size: 14px;">
+              		本软件的设计理念就是使用简单，没有太多花哨的元素，但能满足用户的主要需求。目前这款软件已经
+              		到了尾期小范围测试阶段，我们打算不久后将推向市场，希望能够得到好的反响，感谢你们的支持。
+              	</p>
+              	<div style="margin-bottom: 15px;"></div>
               	
-              	<li>原本无字幕，视频语音为中文时，支持自动生成中文字幕</li>
-              	<div style="margin-bottom: 18px;"></div>
+              	<li>语言支持</li>
+              	<p style="font-size: 14px;">
+              		目前支持语言有将中文、英语、日语、韩语生成中文字幕。
+              	</p>
+              	<div style="margin-bottom: 15px;"></div>
               	
-              	<li>原本没有字幕时，支持根据视频声音生成新的翻译后的字幕</li>
-              	<span>仅支持在线模式。同时基于技术难度，采取了模式识别和深层神经网络结合的办法，虽然精确度及其瓶颈有一定
-              		下降，但是已足以满足大多数用户的使用，并由此减轻了用户的费用成本。具体参见详情。
-              	</span>
-              	<div style="margin-bottom: 18px;"></div>
+              	<li>在线/离线模式</li>
+              	<p style="font-size: 14px;">
+              		在线模式会将音频上传到服务器进行分析后返回对应文字字幕给客户端，离线模式则是根据保存在客户端
+              		本地的算法和字典翻译，目前所有音译都不支持离线模式，只有在原来就有字幕时才支持离线模式，但是
+              		精准度还是没有在线模式好，强烈推荐在线模式。
+              	</p>
+              	
+              	<div style="margin-bottom: 40px;"></div>
               </ul>
               
-              <h4>2.特色</h4>
+              
+              <h4>2.使用方法</h4>
               <ul>
-              	<li>功能强大。可以直接根据声音生成字幕并生成新的视频文件。</li>
-              	<li>使用简单。无需翻墙、海外支付、上传下载等各类烦心操作。</li>
+              	<li>打开软件-->工具-->翻译</li>
+              	<li>选择视频转换前的语言和和转换后的语言</li>
+              	<li>选择根据已有字幕进行翻译或者直接根据声音翻译</li>
+              	<li>选择在线模式或离线模式（推荐在线模式）</li>
+              	<li>选择待翻译的视频</li>
+              	<li>选择目标文件的生成路径</li>
+              	<li>点击开始转换</li>
+              	<li>等待转换完成</li>
+              	<div style="margin-bottom: 40px;"></div>
               </ul>
               
-              <h4>3.关于本项目</h4>
-              <p style="font-size: 16px;">
-              	一次AI与需求碰撞产生的产品，当前处于尾期小范围测试阶段，希望大家多多提Bug和建议啦，
-              	会解锁彩蛋哦 ^_^
-              </p>
-              
-              <h4>3.关于我们</h4>
-              <p style="font-size: 16px;">
-              	冰山研发小组，让我们一起用技术和理想改造这世界吧~
-              </p>
-              <p></p>
-              
-              <h4>4.其他</h4>
-              <p style="font-size: 16px;">
-              	点击详情或者左滑了解更多。（手机端）
-              </p>
-              <p></p>
-              
+              <h4>3.相关截图</h4>
+              <ul>
+              	<li>翻译设置页面：</li>
+              	<img src="http://od7t2h5r2.bkt.clouddn.com/img/liework/resource/translate_setting.jpg" />
+              	<div style="margin-bottom: 20px;"></div>
+              	<li>效果页面(原意应为这个是学校定下的规矩)：</li>
+              	<img style="width: 600px;" src="http://od7t2h5r2.bkt.clouddn.com/img/liework/resource/school_rule.jpg" />
+              	<div style="margin-bottom: 10px;"></div>
+              	<li>效果页面(原意应为两句顺序颠倒，损坏、大脑等)：</li>
+              	<img style="width: 600px;" src="http://od7t2h5r2.bkt.clouddn.com/img/liework/resource/tech_movie.jpg" />
+              	<div style="margin-bottom: 10px;"></div>
+              	<li>效果页面(原意应为他们不知道的，放心吧)：</li>
+              	<img style="width: 600px;" src="http://od7t2h5r2.bkt.clouddn.com/img/liework/resource/weacher_girl.jpg" />
+              	<div style="margin-bottom: 10px;"></div>
+              	<li>效果页面(又出现了上面状语后置没有识别出的情况)：</li>
+              	<img style="width: 600px;" src="http://od7t2h5r2.bkt.clouddn.com/img/liework/resource/lawer.jpg" />
+              	<div style="margin-bottom: 10px;"></div>
+              	<span>从整体上来看，虽然有些地方看起来怪怪的，但已经不影响整体的理解</span>
+              	<div style="margin-bottom: 40px;"></div>
+              </ul>
               <div style="height: 50px;"></div>
           </div>
         </div>
         <!--功能详细end-->
         
         
+        <!--下载入口-->
+        <div class="col-xs-12 col-sm-9 tabPage" style="display: none;" id="downloadTab">
+          <div class="row rowDesc" style="padding: 0px 15px 0px 15px;">
+              <h4>当前程序有加密漏洞问题需要紧急处理，暂时关闭下载入口，给您带来的不便敬请谅解~</h4>
+
+              <div style="height: 700px;"></div>
+          </div>
+        </div>
+        <!--下载入口end-->  
         
+        
+        <!--用户评论-->
+        <div class="col-xs-12 col-sm-9 tabPage" style="display: none;" id="commnentTab">
+          <div class="row rowDesc" style="padding: 0px 15px 0px 15px;">
+              <h4>开发中~</h4>
+              
+              <div style="height: 50px;"></div>
+          </div>
+        </div>
+        <!--用户评论end-->  
+        
+        
+        <!--常见问题-->
+        <div class="col-xs-12 col-sm-9 tabPage" style="display: none;" id="problemTab">
+          <div class="row rowDesc" style="padding: 0px 15px 0px 15px;">
+              <h4>Q：这个软件是真的吗</h4>
+              <span>A：不是。</span>
+              
+              <div style="height: 650px;"></div>
+          </div>
+        </div>
+        <!--常见问题end-->  
+        
+        
+				<!--版本升级-->
+        <div class="col-xs-12 col-sm-9 tabPage" style="display: none;" id="versionTab">
+          <div class="row rowDesc" style="padding: 0px 15px 0px 15px;">
+              <h4>V-3.2.2-180805</h4>
+              <ul>
+              	<li>修改音译算法，降低开发难度，提升翻译效率和效果</li>
+              	<li>添加软件加密以及接口数据加密，增强安全性</li>
+              	<div style="margin-bottom: 20px;"></div>
+              </ul>
+              
+              <h4>V-2.0.0-180718</h4>
+              <ul>
+              	<li>添加日语、韩语音译功能</li>
+              	<li>添加播放器功能</li>
+              	
+              	<li>接入Google文字翻译，替代原自有算法</li>
+              	<div style="margin-bottom: 20px;"></div>
+              </ul>
+              
+              <h4>V-1.4.0-170918</h4>
+              <ul>
+              	<li>添加根据视频原字幕翻译功能</li>
+              	<li>添加英文音译功能</li>
+              	<div style="margin-bottom: 20px;"></div>
+              </ul>
+              
+              <h4>V-1.0.0-170526</h4>
+              <ul>
+              	<li>创建项目</li>
+              	<div style="margin-bottom: 20px;"></div>
+              </ul>
+              <div style="height: 300px;"></div>
+          </div>
+        </div>
+        <!--版本升级end-->        
         
 				<!--右边部分-->
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" >
           <div class="list-group">
             <a href="#" class="list-group-item active tabMenu" name="mainTab">首页</a>
             <a href="#" class="list-group-item tabMenu" name="wholeDescTab">详细说明</a>
-            <a href="#" class="list-group-item tabMenu">付费</a>
-            <a href="#" class="list-group-item tabMenu">评论</a>
-            <a href="#" class="list-group-item tabMenu">注意</a>
-            <a href="#" class="list-group-item tabMenu">版本</a>
+            <a href="#" class="list-group-item tabMenu" name="downloadTab">下载入口</a>
+            <a href="#" class="list-group-item tabMenu" name="commnentTab">用户评论</a>
+            <a href="#" class="list-group-item tabMenu" name="problemTab">常见问题</a>
+            <a href="#" class="list-group-item tabMenu" name="versionTab">版本</a>
           </div>
         </div>
       </div>
